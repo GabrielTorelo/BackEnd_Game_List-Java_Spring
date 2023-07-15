@@ -33,4 +33,20 @@ public class GameMinDTO {
     public String getImgUrl() {
         return imgUrl;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 }
