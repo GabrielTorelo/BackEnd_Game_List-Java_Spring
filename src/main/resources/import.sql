@@ -12,6 +12,7 @@ INSERT INTO tb_game (title, score, game_year, gender, platforms, img_url, short_
 INSERT INTO tb_game (title, score, game_year, gender, platforms, img_url, short_description, long_description) VALUES ('Forza Horizon 5', 3.8, 2021, 'Corrida, Ação e Aventura', 'Xbox One, Xbox Series X|S, Xbox Cloud Gaming, Android e Windows', 'https://store-images.s-microsoft.com/image/apps.49800.13718773309227929.bebdcc0e-1ed5-4778-8732-f4ef65a2f445.9ac09d39-064d-466c-81ca-2f1b6f0b95c5', '[Wikipedia] - Forza Horizon 5 é um jogo eletrônico de corrida desenvolvido pela Playground Games e publicado pela Xbox Game Studios. É o décimo segundo título principal da franquia Forza.', '[Wikipedia] - Forza Horizon 5 é um jogo eletrônico de corrida ambientado em um ambiente de mundo aberto que se passa em uma representação ficcional do México. O jogo tem o maior mapa de toda a série Forza Horizon, sendo 50% maior do que o de Forza Horizon 4, além de também ter o ponto mais alto da série Horizon.');
 INSERT INTO tb_game (title, score, game_year, gender, platforms, img_url, short_description, long_description) VALUES ('Hitman 3', 4.3, 2021, 'Furtividade, Tiro, Ação e Aventura', 'PlayStation 4|5, Nintendo Switch, Xbox One, Xbox Series X|S, Google Stadia e Windows', 'https://image.api.playstation.com/vulcan/ap/rnd/202301/2315/AV5D2dPmPZL9CT3IdveGCGJZ.jpg', '[Wikipedia] - Hitman 3 é um jogo eletrônico de furtividade desenvolvido e publicado pela IO Interactive. É o oitavo título principal da série Hitman.', '[Wikipedia] - Hitman 3 é um jogo furtivo jogado numa perspetiva de terceira pessoa. Os jogadores assumem o papel do Agente 47 explorando vários locais ao redor do mundo com o objetivo de assassinar alvos contratados.Hitman 3 conclui a historia da trilogia, com o Agente 47 e os seus aliados a perseguir os lideres da Providence, uma organização secreta que controla os negócios mundiais.');
 
+/* Inseri jogos na lista 'Todos os Jogos' */
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (1, 1, 0);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (1, 2, 1);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (1, 3, 2);
@@ -22,3 +23,9 @@ INSERT INTO tb_belonging (list_id, game_id, position) VALUES (1, 7, 6);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (1, 8, 7);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (1, 9, 8);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (1, 10, 9);
+
+/* Inseri jogos na lista 'Meus Favoritos' */
+INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 2, 0);
+INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 4, 1);
+INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 7, 2);
+INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 10, 3);
