@@ -22,4 +22,18 @@ public class GameService {
 
         return rGames.stream().map(gameEntity -> new GameMinDTO(gameEntity)).toList();
     }
+
+    @Transactional(readOnly = true)
+    public GameShortDTO readID(Long id) {
+        Game rGame = gameRepository.findById(id).get();
+
+        return new GameShortDTO(rGame);
+    }
+
+    @Transactional(readOnly = true)
+    public GameLongDTO readMoreID(Long id) {
+        Game rGame = gameRepository.findById(id).get();
+
+        return new GameLongDTO(rGame);
+    }
 }
