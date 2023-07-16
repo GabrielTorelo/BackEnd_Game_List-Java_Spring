@@ -8,6 +8,7 @@ import com.gabriel_torelo.game_list.dto.GameLongDTO;
 import com.gabriel_torelo.game_list.dto.GameMinDTO;
 import com.gabriel_torelo.game_list.dto.GameShortDTO;
 import com.gabriel_torelo.game_list.entities.Game;
+import com.gabriel_torelo.game_list.projections.GameMinProjection;
 import com.gabriel_torelo.game_list.repositories.GameRepository;
 
 @Service
@@ -35,5 +36,12 @@ public class GameService {
         Game rGame = gameRepository.findById(id).get();
 
         return new GameLongDTO(rGame);
+    }
+
+    @Transactional(readOnly = true)
+    public List<GameMinDTO> readListID(Long id) {
+        List<GameMinProjection> rGameProj = gameRepository.readListID(id);
+
+        return rGameProj.stream().map(gameProject -> new GameMinDTO(gameProject)).toList();
     }
 }
